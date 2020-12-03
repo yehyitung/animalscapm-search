@@ -1,0 +1,130 @@
+body{
+  background-image: url('https://cutewallpaper.org/21/animal-crossing-background-pattern/Backgrounds-Wiki-Animal-Crossing-Pocket-Camp-Amino.jpg');
+  z-index: -99;
+}
+.container{
+  width: 1400px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .banner-wrap{
+  margin: 0 auto;
+  background-image: url('https://images4.alphacoders.com/107/thumb-1920-1070856.jpg');
+  background-size: cover;
+  background-position: top center;
+  height: 235px;
+  width: 1400px;
+
+}
+.select-title{
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  background-color: #fede64;
+  margin: 20px 0;
+  color: #6d4517;
+  font-weight: 500;
+  font-size: 20px;
+}
+.select-wrap{
+  margin: 0 auto;
+}
+.select-wrap .select-option{
+  appearance:none;
+  width: 300px;
+  height: 48px;
+  background-color: rgba(255,255,255,0.70) ;
+  border: 3px solid white;
+  border-radius: 3px;
+  padding: 12px 10px;
+  font-size: 18px;
+}
+.card-section{
+  margin-bottom: 60px;
+}
+.card-list{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.card{
+  box-sizing: border-box;
+  padding: 20px;
+  width: 340px;
+  height: 380px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2.8px 2.2px rgba(16, 16, 16, 0.057);
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.card .card-top{
+  box-shadow: 0 2px 4px -3px rgba(128, 128, 128, 0.406);
+  margin-bottom: 20px;
+  padding: 10px 10px 20px 10px;
+  display: flex;
+  align-items: center;
+}
+.card .card-top-photo{
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin-right: 20px;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(113, 113, 113, 0.372);
+}
+.card .card-top .animal-name{
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.card .card-top .animal-species{
+  margin-left: 20px;
+  font-size: 20px;
+}
+.card .card-top .animal-theme{
+  font-weight: 500;
+  
+}
+.card .card-top .animal-material{
+  margin-left: 10px;
+  
+}
+.card .card-bottom p{ 
+  margin-bottom: 15px;
+  font-weight: 500;
+  
+}
+table{
+  border-radius: 5px;
+  color: #fff;
+  border-collapse: collapse;
+  background-color: #4ab199;
+}
+th,td{
+  width: 50px;
+  text-align: center;
+  border: 3px solid #fff;
+  padding: 10px;
+}
+th{
+  background-color: #80571d;
+}
+.footer{
+  width: 100%;
+  background-color: #6d4517;
+  padding: 15px;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+}
+.footer-text{
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  
+}
