@@ -9,6 +9,7 @@ function getTotalAnimalsData(callback){
 	})
 }
 
+
 function getSelectSpecies(animalsData){
 	var template = `<option value="">---請選擇動物物種---</option>`
 	var animalSpeciesArray = [];
@@ -34,6 +35,7 @@ function getSelectＭaterial(animalsData){
 	return template;
 }
 
+
 function getTargetSpeciesInfo(targetSpecies,rawSpeciesInfo){
 	return rawSpeciesInfo.filter(animalsData => {
 		return animalsData.物種 === targetSpecies;
@@ -44,6 +46,7 @@ function getTargetＭaterialInfo(targetＭaterial,rawＭaterialInfo){
 		return animalsData.材料 === targetＭaterial;
 	})
 }
+
 
 function printCardWrapSpecies(targetSpeciesInfo){
 	var cardWrap = document.querySelector('.card-section');
@@ -141,15 +144,15 @@ function printCardWrapＭaterial(targetＭaterialInfo){
 getTotalAnimalsData(function(res){
 	var selectSpecies = document.getElementById('select-species');
 	var selectＭaterial = document.getElementById('select-material');
-	var selectTheme = document.getElementById('select-theme');
-	var selectMeet = document.getElementById('select-meet');
+	// var selectTheme = document.getElementById('select-theme');
+	// var selectMeet = document.getElementById('select-meet');
 	var animalsData = res;
 	console.log(animalsData[0].願望需求lv);
 
 	selectSpecies.innerHTML = getSelectSpecies(animalsData);
 	selectＭaterial.innerHTML = getSelectＭaterial(animalsData);
-	selectTheme.innerHTML = getSelectSpecies(animalsData);
-	selectMeet.innerHTML = getSelectSpecies(animalsData);
+	// selectTheme.innerHTML = getSelectSpecies(animalsData);
+	// selectMeet.innerHTML = getSelectSpecies(animalsData);
 
 	selectSpecies.addEventListener('change',function(e){
 		var targetSpecies = e.target.value;
