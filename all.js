@@ -1,5 +1,5 @@
 function getTotalAnimalsData(callback){
-	fetch('http://gsx2json.com/api?id=1lJhPRCKvFyHVIT5PSG95-gQeBicZUfiU3gqUL4vws6k&columns=false')
+	fetch('https://gsx2json.com/api?id=1lJhPRCKvFyHVIT5PSG95-gQeBicZUfiU3gqUL4vws6k&columns=false')
 	.then(function(response){
 		return response.json()
 	})
