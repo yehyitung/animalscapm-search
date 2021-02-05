@@ -47,6 +47,51 @@ function getTargetＭaterialInfo(targetＭaterial,rawＭaterialInfo){
 	})
 }
 
+function printAllCard(animalsData){
+	var cardWrap = document.querySelector('.card-section');
+	var listTemplate = "";
+
+	for(var i = 0; i < animalsData.length; i++){
+		listTemplate += `
+		<div class="card">
+			<div class="card-top">
+				<div class="card-top-photo"></div>
+				<div class="card-top-text">
+					<h3 class="animal-name">${animalsData[i].名字}<span class="animal-species">${animalsData[i].物種}</span></h3>
+					<p class="animal-theme">${animalsData[i].主題}<span class="animal-material">${animalsData[i].材料}</span></p>
+				</div>
+			</div>
+			<div class="card-bottom">
+				<p class="special-wish">特別願望家具：${animalsData[i].特別願望}</p>
+				<p class="wish-level">特別願望等級：${animalsData[i].願望需求lv}</p>
+				<p class="meet-method">相遇方式：${animalsData[i].相遇方式}</p>
+				<p class="lesson-title">課程階段</p>
+				<table class="lesson-list">
+					<tr class="list-title">
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>5</th>
+					</tr>
+					<tr>
+						<td>${animalsData[i].課程1}</td>
+						<td>${animalsData[i].課程2}</td>
+						<td>${animalsData[i].課程3}</td>
+						<td>${animalsData[i].課程4}</td>
+						<td>${animalsData[i].課程5}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		`
+	}
+	cardWrap.innerHTML = `
+	<div class="card-list">
+		${listTemplate}
+	</div>
+	`
+}
 
 function printCardWrapSpecies(targetSpeciesInfo){
 	var cardWrap = document.querySelector('.card-section');
@@ -147,6 +192,7 @@ getTotalAnimalsData(function(res){
 	// var selectTheme = document.getElementById('select-theme');
 	// var selectMeet = document.getElementById('select-meet');
 	var animalsData = res;
+	printAllCard(animalsData);
 	console.log(animalsData[0].願望需求lv);
 
 	selectSpecies.innerHTML = getSelectSpecies(animalsData);
